@@ -1,0 +1,168 @@
+/* Prevent Layout Shifts */
+* {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+/* Professional Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Navbar Animations */
+.nav__logo {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.nav__logo:hover {
+  transform: scale(1.05);
+}
+
+.nav__links .link a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav__links .link a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav__links .link a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Button Animations */
+.btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(61, 92, 184, 0.25);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(61, 92, 184, 0.2);
+}
+
+/* Booking Form Animations */
+.booking__nav span {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, background-color;
+  position: relative;
+  overflow: hidden;
+}
+
+.booking__nav span:hover {
+  background-color: var(--primary-color-dark);
+  color: var(--white);
+  transform: scale(1.03); 
+}
+
+.booking__nav span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+  transform: translateX(-100%);
+}
+
+.booking__nav span:hover::after {
+  transition: transform 0.6s ease;
+  transform: translateX(100%);
+}
+
+.form__group {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  height: 100%;
+  padding: 1rem;
+}
+
+.form__group:hover {
+  transform: translateY(-3px);
+}
+
+.form__group input {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.form__group input:focus {
+  /* box-shadow: 0 0 0 2px var(--primary-color); */
+  transform: translateY(-1px);
+}
+
+.lounge__image img:nth-child(1):hover {
+  transform: translate(calc(-51% - 3rem), -51%);
+  transition: transform 0.3s ease-in-out;
+}
+.lounge__image img:nth-child(2):hover {
+  transform: translate(calc(-51% + 6rem), calc(-51% + 7rem));
+  transition: transform 0.3s ease-in-out;
+}
+
+.travellers__card{
+  transition: transform 0.3s ease-in-out;
+}
+
+.travellers__card:hover{
+  transform: scale(1.01);
+}
+.travellers__card:hover .travellers__card__content {
+  bottom: 3rem;
+  padding: 1rem;
+  background: white;
+  animation: animation-travellers-card 0.3s ease-in-out;
+}
+@keyframes animation-travellers-card {
+  0%{
+    bottom: 0rem;
+  }
+  100%{
+    bottom: 3rem;
+  }
+}
+
+
+
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}

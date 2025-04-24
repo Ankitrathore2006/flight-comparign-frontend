@@ -1,0 +1,239 @@
+.about-page {
+  min-height: 100vh;
+  background-color: var(--extra-light);
+  padding-top: 0px;
+}
+
+/* Hero Section */
+.about__hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/254381.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 8rem 0;
+  text-align: center;
+  color: white;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  opacity: 0.9;
+}
+
+/* Story Section */
+.about__story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 6rem 0;
+}
+
+.story__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.story__content p {
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.story__image {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.story__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.story__image:hover img {
+  transform: scale(1.05);
+}
+
+/* Stats Section */
+.about__stats {
+  background: var(--primary-color);
+  padding: 4rem 0;
+  color: white;
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.stat__card {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.stat__card:hover {
+  transform: translateY(-5px);
+}
+
+.stat__icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.stat__card h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.stat__card p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Values Section */
+.about__values {
+  padding: 6rem 0;
+}
+
+.values__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.value__card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.value__card:hover {
+  transform: translateY(-5px);
+}
+.value__card:hover .value__icon svg {
+ color: var(--white);
+ fill: var(--primary-color);
+}
+
+.value__icon {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-color-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.value__icon svg {
+  color: var(--primary-color);
+}
+
+.value__card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.value__card p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Team Section */
+.about__team {
+  background: var(--extra-light);
+  padding: 6rem 0;
+}
+
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.team__member {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team__member:hover {
+  transform: translateY(-5px);
+}
+
+.team__member img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.section__header_about{
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: var(--white);
+}
+
+.team__member h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 1rem 0 0.5rem;
+  padding: 0 1.5rem;
+}
+
+.team__member p {
+  color: var(--text-light);
+  padding: 0 1.5rem 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 0px;
+  }
+
+  .about__hero {
+    padding: 6rem 0;
+  }
+
+  .about__story {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 4rem 0;
+  }
+
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .values__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team__grid {
+    grid-template-columns: 1fr;
+  }
+} 
